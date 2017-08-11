@@ -138,7 +138,7 @@ for Index = 1:length(N)
     Iter(Index,:) = [infoSedumi.iter,infoSDPT.iter,infoSdpa.iteration,infoSCSdirect.iter,infoSCSindirect.iter,infoCDCSsos.iter];
     TimeAver(Index,:)  = TimeADMM(Index,:)./Iter(Index,4:end);
 
-    save QuarticPolyN3.mat
+    save QuarticPoly.mat
 end
 
 

@@ -202,10 +202,8 @@ for i = 9:length(n)
     
     InfoTerm(i,:) = [prog1.solinfo.info.feasratio,infoSDPT.termcode, infoSdpa.dualityGap,prog7.solinfo.info.problem] ; 
 
-    save ResultRandomN4
+    save ResultRandom
 
 end
-       
 
-%save ResultRandomN1
 
