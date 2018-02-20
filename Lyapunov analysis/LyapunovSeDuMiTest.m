@@ -46,6 +46,7 @@ for i = 1:9
         tsdpt = tic;
         opts.gaptol = TolIPM;
         [obj,X,y,Z,infoSDPT] = sqlp(blk,At2,C2,b2,opts); 
+        %[obj,X,y,Z,infoSDPT] = sdpt3(blk,At2,C2,b2,opts); 
         timeSdpt = toc(tsdpt);
     catch
         warning('out of memory')
@@ -114,5 +115,5 @@ for i = 1:9
     TimeAver(i,:)  = TimeADMM(i,:)./Iter(i,4:end);
     InfoTerm(i,:) = [infoSedumi.feasratio,infoSDPT.termcode, infoSdpa.dualityGap,infoSCSdirect.relGap,infoSCSindirect.relGap,infoCDCSsos.problem] ; 
 
-    save LyapunovSeDuMiDataR1.mat
+    save LyapunovSeDuMiData0119.mat
 end
